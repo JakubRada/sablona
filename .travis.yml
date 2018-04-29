@@ -1,0 +1,7 @@
+language: java
+os:
+  - linux
+script:
+  - ant compile
+  - ant compile-test
+  - ant test
