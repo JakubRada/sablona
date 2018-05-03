@@ -46,4 +46,9 @@ public class TemplateTest {
     public void wrongOnPurpose() {
         assertEquals(0, 1);
     }
+
+    @Test
+    public void anotherWrongOnPurpose() {
+        assertEquals(0,2);
+    }
 }
