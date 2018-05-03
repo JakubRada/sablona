@@ -6,6 +6,11 @@ import java.util.HashMap;
 
 public class TemplateTest {
     @Test
+    public void anotherWrongOnPurpose() {
+        assertEquals(0,2);
+    }
+    
+    @Test
     public void noChange() {
         Template template = new Template("Od: Dodavatel elektřtiny");
         Map<String, String> variables = new HashMap<String, String>();
@@ -45,10 +50,5 @@ public class TemplateTest {
     @Test
     public void wrongOnPurpose() {
         assertEquals(0, 1);
-    }
-
-    @Test
-    public void anotherWrongOnPurpose() {
-        assertEquals(0,2);
     }
 }
