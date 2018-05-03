@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Build file for our projet -->
-<project basedir="." name="Word wrapping" default="main">
+<project basedir="." name="Templaters" default="main">
     <target name="main"
             depends="compile"
             description="Default target: compile all files."
@@ -43,7 +43,7 @@
             description="Run JUnit tests, generate HTML report."
         >
         <mkdir dir="out/test-report" />
-        <junit printsummary="withOutAndErr" failureproperty="tests.failed" haltonfailure="no">
+        <junit printsummary="withOutAndErr" failureproperty="junit.failed" haltonfailure="yes">
             <classpath>
                 <pathelement path="lib/junit-4.12.jar" />
                 <pathelement path="lib/hamcrest-core-1.3.jar" />
