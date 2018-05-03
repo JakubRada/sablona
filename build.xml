@@ -43,7 +43,7 @@
             description="Run JUnit tests, generate HTML report."
         >
         <mkdir dir="out/test-report" />
-        <junit printsummary="withOutAndErr" failureproperty="junit_failed" haltonfailure="no" fork="true">
+        <junit printsummary="on" failureproperty="junit.failed" haltonfailure="no">
             <classpath>
                 <pathelement path="lib/junit-4.12.jar" />
                 <pathelement path="lib/hamcrest-core-1.3.jar" />
