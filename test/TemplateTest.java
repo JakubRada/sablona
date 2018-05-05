@@ -46,7 +46,6 @@ public class TemplateTest {
         variables.put("vedouci", "Vila Amalka");
         assertEquals(template.render(variables), "Od: Ferda Mravenec\n...\nDekuji, Ferda Mravenec\n");
     }
-
     @Test
     public void wrongOnPurpose() {
         assertEquals(0, 1);
