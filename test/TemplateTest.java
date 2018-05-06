@@ -7,7 +7,7 @@ import java.util.HashMap;
 public class TemplateTest {
     /*
     @Test
-    public void anotherWrongOnPurpose() {
+    public void wrongOnPurpose() {
         assertEquals(0,2);
     }*/
     
@@ -47,9 +47,17 @@ public class TemplateTest {
         variables.put("vedouci", "Vila Amalka");
         assertEquals(template.render(variables), "Od: Ferda Mravenec\n...\nDekuji, Ferda Mravenec\n");
     }
+
+    @Test
+    public void missingVariable() {
+        Template template = new Template("Od: {{ zakaznik }}\n...\nDekuji, {{ vedouci }}\n");
+        Map<String, String> variables = new HashMap<String, String>();
+        variables.put("zakaznik", "Ferda Mravenec");
+        assertEquals(template.render(variables), "Od: Ferda Mravenec\n...\nDekuji, {{ vedouci }}\n");
+    }
     /*
     @Test
-    public void wrongOnPurpose() {
+    public void anotherWrongOnPurpose() {
         assertEquals(0, 1);
     }*/
 }
