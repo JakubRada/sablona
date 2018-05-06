@@ -53,8 +53,14 @@ public class CsvTemplater {
         String[] names;
         int count = 0;
         Map<String, String> variables = new HashMap<String, String>();
-        FileReader reader = new FileReader(csvFile);
-        Scanner sc = new Scanner(reader);
+        Scanner sc;
+        if ("".equals(csvFile)) {
+            sc= new Scanner(System.in);
+        } else {
+            FileReader reader = new FileReader(csvFile);
+            sc = new Scanner(reader);
+        }
+        
         if (sc.hasNextLine()) {
             headlines = sc.nextLine().split(",");
         }
